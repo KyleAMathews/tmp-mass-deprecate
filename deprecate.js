@@ -5,5 +5,7 @@ const packages = fs.readFileSync(`./packages.txt`, `utf-8`).split(`\n`).map(p =>
 
 packages.forEach(package => {
   shell.echo(`npm deprecate ${package} "bad publish"`)
+  // Uncomment to run.
+  // shell.exec(`npm deprecate ${package} "bad publish"`)
 })
 
